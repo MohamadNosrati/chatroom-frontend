@@ -1,3 +1,15 @@
+class AuthRoutes {
+  private readonly base: string = "/users/auth";
+
+  signup() {
+    return `${this.base}/signup`;
+  }
+
+  signin() {
+    return `${this.base}/signin`;
+  }
+}
+
 class UserRoutes {
   private readonly base: string = "/users";
 
@@ -21,7 +33,6 @@ class UserRoutes {
     return `${this.base}/${id}`;
   }
 }
-
 
 class RolesRoute {
   private readonly base: string = "/roles";
@@ -47,7 +58,6 @@ class RolesRoute {
   }
 }
 
-
 class PermissionsRoutes {
   private readonly base: string = "/permissions";
 
@@ -72,8 +82,7 @@ class PermissionsRoutes {
   }
 }
 
-
+export const authRoutes = new AuthRoutes();
 export const userRoutes = new UserRoutes();
 export const rolesRoute = new RolesRoute();
 export const permissionsRoute = new PermissionsRoutes();
-

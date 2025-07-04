@@ -7,8 +7,11 @@ class FrontRoutes {
     return "/signin";
   }
 
-  dashboard(){
-    return "/dashboard"
+  dashboard() {
+    return "/dashboard";
+  }
+  dashboardUsers() {
+    return "/dashboard/users";
   }
 }
 
