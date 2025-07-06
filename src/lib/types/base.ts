@@ -7,4 +7,5 @@ interface IBaseResponse<T> {
 interface IBaseParams {
     limit:number;
     page:number;
+    isActive?:boolean;
 }

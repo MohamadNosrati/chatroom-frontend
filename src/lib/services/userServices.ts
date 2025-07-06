@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { userRoutes } from "../routes/backendRoutes";
 import axiosInstance from "./base";
-import { IUser } from "../types/users";
+import { IUser, IUserParams } from "../types/users";
 
-const useGetAllUsers = (params?: any) => {
+const useGetAllUsers = (params?: Partial<IUserParams>) => {
   const { data, isLoading } = useQuery({
-    queryKey: [userRoutes.getAllUsers()],
+    queryKey: [userRoutes.getAllUsers(),params],
     queryFn: () =>
       axiosInstance.get<
         IBaseResponse<{

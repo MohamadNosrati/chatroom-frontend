@@ -9,12 +9,13 @@ interface IUserStore {
 
 const useUserStore = create<IUserStore>((set) => ({
   filters: {
-    userName: undefined,
-    email: undefined,
+    userName: "",
+    email: "",
     createdAt: undefined,
     limit: 3,
     page: 1,
     updatedAt: undefined,
+    iaActive:undefined,
   },
   setFilters: (updates: Partial<IUserParams>) =>
     set((state) => ({
@@ -32,6 +33,7 @@ const useUserStore = create<IUserStore>((set) => ({
         limit: 3,
         page: 1,
         updatedAt: undefined,
+        isActive:undefined
       },
     }),
 }));

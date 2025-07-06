@@ -3,6 +3,7 @@ import { logout } from "@/lib/actions/auth/authActions";
 const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
+  
   return (
     <>
       <div className="my-5">
